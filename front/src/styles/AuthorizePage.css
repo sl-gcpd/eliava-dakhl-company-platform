@@ -1,0 +1,26 @@
+.authorize-box {
+    max-width: 600px;
+    min-width: 330px;
+    margin: 80px auto;
+    background-color: #2e3440;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 8px 5px 9px rgba(0,0,0,.5);
+}
+
+.register-hint {
+    text-align: center;
+    color: #bbb;
+    font-weight: 700;
+}
+
+.register-hint a {
+    color: #4e7fc3;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color .4s;
+}
+
+.register-hint a:hover {
+    color: #3d587f;
+}
