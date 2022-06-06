@@ -1,6 +1,33 @@
-.current-price {
-    display: inline;
-    font-size: 18px;
+.price-filter {
+    margin: 0 8px;
     font-family: inherit;
+    border-radius: 8px;
+    background-color: #ebebeb;
+    color: #333;
+    border: none;
+    width: 80px;
+    padding: 4px;
     font-weight: 600;
+    font-size: 18px;
+    box-shadow: 4px 0px 7px rgba(0,0,0,.5);
+}
+
+.price-filter:focus {
+    outline: none;
+}
+
+h3 {
+    color: #ebebeb;
+    font-size: 14px;
+    margin: 20px 8px 4px;
+}
+
+.price-box {
+    flex: 50%;
+}
+
+@media screen and (max-width: 650px) {
+    .price-box {
+        flex: 100%;
+    }
 }

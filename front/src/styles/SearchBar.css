@@ -2,6 +2,8 @@
     background: #ebebeb;
     color: #333;
     height: 60px;
+    width: 50%;
+    min-width: 350px;
     font-family: inherit;
     font-size: 20px;
     font-weight: 700;
@@ -11,31 +13,6 @@
     box-shadow: 7px 5px 12px rgba(0,0,0,.4);
 }
 
-.search-bar {
-    width: fit-content;
-    position: relative;
-}
-
-button {
-    border: none;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 20px;
-    position: absolute;
-    cursor: pointer;
-    right: 0;
-    font-weight: 700;
-    font-family: inherit;
-    color: #ebebeb;
-    background: #3d587f;
-    transition: visibility .4s, opacity .4s, background .4s;
-}
-
-button:hover {
-    background: #2e3440;
-}
-
-input:focus, button:focus {
+input:focus {
     outline: none;
 }

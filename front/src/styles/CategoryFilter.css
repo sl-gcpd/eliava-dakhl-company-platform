@@ -1,0 +1,9 @@
+.category-box {
+    flex: 50%;
+}
+
+@media screen and (max-width: 650px) {
+    .category-box {
+        flex: 100%;
+    }
+}
