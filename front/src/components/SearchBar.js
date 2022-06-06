@@ -9,7 +9,7 @@ export const SearchBar = () => {
     return (
       <div className="search-bar">
       
-        <input type="text" placeholder="Search" onClick={() => setIsButtonVisible(true)}/>
+        <input className="search-input" type="text" placeholder="Search" onClick={() => setIsButtonVisible(true)}/>
       
         <button style={{
             visibility: isButtonVisible ? "visible" : "hidden",

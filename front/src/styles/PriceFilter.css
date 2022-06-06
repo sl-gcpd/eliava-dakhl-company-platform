@@ -1,0 +1,6 @@
+.current-price {
+    display: inline;
+    font-size: 18px;
+    font-family: inherit;
+    font-weight: 600;
+}
