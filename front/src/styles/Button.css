@@ -1,4 +1,4 @@
-button {
+.btn {
     font-family: inherit;
     font-weight: 800;
     color: #ebebeb;
@@ -17,11 +17,11 @@ button {
     transition:  background .4s, box-shadow .4s;
 }
 
-button:hover {
+.btn:hover {
     background-color: #2e3440;
     box-shadow: 8px -1px 7px rgba(0,0,0,.3);
 }
 
-button:focus {
+.btn:focus {
     outline: none;
 }

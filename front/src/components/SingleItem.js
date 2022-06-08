@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../styles/SingleItem.css";
-import "../styles/Shared/Shared.css";
 export const SingleItem = ({ Item }) => {
   const [Height, setHeight] = useState("0px");
 
