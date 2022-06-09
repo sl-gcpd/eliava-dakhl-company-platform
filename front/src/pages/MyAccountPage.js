@@ -2,6 +2,6 @@ import React from 'react'
 
 export const MyAccountPage = () => {
   return (
-    <div></div>
+    <div>MyAccount</div>
   )
 }
