@@ -2,6 +2,6 @@ import React from 'react'
 
 export const HomePage = () => {
   return (
-    <div></div>
+    <div>Home</div>
   )
 }
