@@ -7,7 +7,7 @@ export const SingleItem = ({name, img, categories, price, description}) => {
         <div className="single-item-box">
             <div className="single-main-box">
                 <div className="single-half">
-                    <img src={img}/>
+                    <img src={img} alt=""/>
                 </div>
                 <div className="single-half">
                     <div className="single-title">
@@ -19,12 +19,13 @@ export const SingleItem = ({name, img, categories, price, description}) => {
                     </div>
                 </div>
             </div>
-            {/*<ul>*/}
-            {/*    {categories &&*/}
-            {/*        categories.map((e) =>*/}
-            {/*            <li>{e}</li>*/}
-            {/*        )}*/}
-            {/*</ul>*/}
+            <ul>
+                {categories &&
+                    categories.map((e) =>
+                        <li>{e}</li>
+                    )
+                }
+            </ul>
             <p className="single-description">{description}</p>
         </div>
     );

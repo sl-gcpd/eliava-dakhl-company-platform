@@ -83,12 +83,13 @@
     margin: auto 0;
     border-radius: 10%;
     display: block;
+    padding: 4px;
     transition: .4s;
-    border: 8px solid #fff;
+    border: 8px solid #2e3440;
 }
 
 .single-main-box img:hover {
-    border: 8px solid #2e3440;
+    border: 8px solid #3d587f;
 }
 
 .single-description {
@@ -101,6 +102,27 @@
     margin: 10px 12px;
     flex: 100%;
     display: block;
+}
+
+.single-item-box ul {
+    margin: 16px auto;
+}
+
+.single-item-box li {
+    display: inline;
+    margin: 4px 8px;
+    font-size: 18px;
+    background: #3d587f;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.single-item-box li:hover {
+    background: #2e3440;
 }
 
 @media (max-width: 630px) {

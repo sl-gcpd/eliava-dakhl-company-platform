@@ -7,7 +7,6 @@ export const ListItem = ({name, img, price, description}) => {
             <img alt="" src={img}/>
             <h3>{name}</h3>
             <h6>${price}</h6>
-            <p>{description}</p>
             <div className="list-item-btn-box">
                 <button className="list-item-read-more">read more</button>
                 <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
