@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import{link} from "react-router-dom";
+import{Link} from "react-router-dom";
 import "../styles/Header.css";
 
 export const Header = () => {
@@ -9,23 +9,23 @@ export const Header = () => {
        <h3 className = "eliavadakhl">Eliava Dakhl</h3>
        <ul 
          className = {isMobile ? "nav-links-mobile" : "nav-links"}
-         onClict={() => setIsMobile(false)}
+         onClick={() => setIsMobile(false)}
          >
-         <link to = "/homepage" className = "homepage">
+         <Link to = "/homepage" className = "homepage">
            <li>Home</li>
-     </link>
-     <link to = "/authorizepage" className = "authorizepage">
+     </Link>
+     <Link to = "/authorizepage" className = "authorizepage">
         <li>Sign In</li>
-     </link>
-     <link to = "/authorizepage" className = "authorizepage">
+     </Link>
+     <Link to = "/authorizepage" className = "authorizepage">
         <li>Sign Up</li>
-     </link>
-     <link to = "/myaccountpage" className = "myaccountpage">
+     </Link>
+     <Link to = "/myaccountpage" className = "myaccountpage">
         <li>My Account</li>
-     </link>
-     <link to = "/individualproductpage" className = "individualproductpage">
+     </Link>
+     <Link to = "/individualproductpage" className = "individualproductpage">
         <li>Ind. Product</li>
-     </link>
+     </Link>
 
        </ul>
        <button

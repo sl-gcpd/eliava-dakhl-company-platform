@@ -1,44 +1,48 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import AuthorizePage from "./pages/AuthorizePage";
-import MyAccountPage from "./pages/MyAccountPage";
-import IndividualProductPage from "./pages/IndividualProductPage";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import './App.css';
+import "../styles/Footer.css";
 
-
-const App = () => {
-  return(
-    <div className = "page-container">
-    <div className = "Content-wrap">
-  
-  <Router >
-    <Header />
-    <Switch>
-      <Route path="/" component={home} exact>
-        <home />
-      </Route>
-      <Route path="/" component={SignIn} exact>
-        <authorizepage />
-      </Route>
-      <Route path="/" component={SignUp} exact>
-        <authorizepage />
-      </Route>
-      <Route path="/" component={MyAccount} exact>
-        <myaccountpage />
-      </Route>
-      <Route path="/" component={IndProduct} exact>
-        <individualproductpage />
-      </Route>
-    </Switch>
-    </Router>
-    </div>
-    <Footer />
+function Footer() {
+  return (
+    <div className="main-footer">
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h4>ELIAVA DAKHL</h4>
+            <h1 className="list-unstyled">
+              <li>533-32-43-54</li>
+              <li>Tbilisi, Georgia</li>
+              <li>Baratashvili str</li>
+            </h1>
+          </div>
+          
+          <div className="col">
+            <h4>Stuff</h4>
+            <ui className="list-unstyled">
+              <li>about</li>
+              <li>contact</li>
+              <li>help</li>
+            </ui>
+          </div>
+          
+          <div className="col">
+            <h4>WELL ANOTHER COLUMN</h4>
+            <ui className="list-unstyled">
+              <li>about</li>
+              <li>contact</li>
+              <li>help</li>
+            </ui>
+          </div>
+        </div>
+        <hr />
+        <div className="row">
+          <p className="col-sm">
+            &copy;{new Date().getFullYear()} ELIAVA DAKHL | All rights reserved |
+            Terms Of Service | Privacy
+          </p>
+        </div>
+      </div>
     </div>
   );
-  
 }
 
-export default App;
+export default Footer;

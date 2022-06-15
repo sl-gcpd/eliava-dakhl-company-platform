@@ -4,7 +4,7 @@ import { TextField } from '../components/TextField'
 import { useState } from 'react'
 import '../styles/AuthorizePage.css'
 
-export const AuthorizePage = ({isSigningUp}) => {
+ const AuthorizePage = ({isSigningUp}) => {
   const [ isSignUp, setIsSignUp ] = useState(isSigningUp)
 
   return (
@@ -28,3 +28,4 @@ export const AuthorizePage = ({isSigningUp}) => {
     </div>
   )
 }
+export default AuthorizePage;
