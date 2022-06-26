@@ -1,7 +1,8 @@
 
 .list-item-box {
-  margin: 100px auto;
-  width: 320px;
+  margin: 30px auto;
+  min-width: 320px;
+  max-width: 400px;
   display: flex;
   flex-flow: column;
   position: relative;
@@ -11,6 +12,7 @@
   box-shadow: 7px 4px 6px rgba(0, 0, 0, 0.4);
   transition: .4s;
 }
+
 
 .list-item-box:hover {
   box-shadow: 2px 0 8px rgba(0,0,0,.4);
