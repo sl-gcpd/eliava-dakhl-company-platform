@@ -1,11 +1,6 @@
 .product-list {
     display: flex;
-    margin: 30px auto;
     justify-content: start;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     height: auto;
-}
-
-.product-list.ListItem {
-    flex: 50%;
 }

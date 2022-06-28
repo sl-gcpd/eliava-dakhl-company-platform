@@ -12,13 +12,13 @@ export const HomePage = () => {
         })
     }, [])
     return (
-        <>
+        <div className="homepage">
+            <Search />
             <div className="product-list">
                 {products.map((p) => (
                     <ListItem key={p.id} name={p.name} img={p.image} price={p.price}/>
                 ))}
             </div>
-            <Search />
-        </>
+        </div>
     )
 }

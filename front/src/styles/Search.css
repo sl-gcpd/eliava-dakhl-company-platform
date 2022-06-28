@@ -1,18 +1,20 @@
 .search-box {
     background-color: #2e3440;
+    width: 90%;
+    margin: 8px auto;
     min-width: 360px;
-    padding: 16px;
+    border-radius: 8px;
+    padding: 20px;
 }
 
 .filters {
     width: 65%;
-    display: flex;
-    flex-direction: row;
 }
 
 
 @media screen and (max-width: 650px) {
     .filters {
+        width: 100%;
         flex-direction: column; 
     }
 }
