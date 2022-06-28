@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const MyAccountPage = () => {
+const MyAccountPage = () => {
   return (
-    <div></div>
+    <div>MyAccount</div>
   )
 }
+export default MyAccountPage;

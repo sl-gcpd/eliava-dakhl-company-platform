@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const IndividualProductPage = () => {
+const IndividualProductPage = () => {
   return (
-    <div></div>
+    <div>IndProduct</div>
   )
 }
+export default IndividualProductPage;
+
