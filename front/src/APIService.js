@@ -9,7 +9,7 @@ export default class APIService {
     }
 
     static GetFilteredProducts(queryParameters) {
-        return fetch("http://127.0.0.1:8000/api/product?${queryParameters}", {
+        return fetch(`http://127.0.0.1:8000/api/product/search?${queryParameters}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -18,7 +18,7 @@ export default class APIService {
     }
 
     static GetProduct(id) {
-        return fetch("http://127.0.0.1:8000/api/product/${id}", {
+        return fetch(`http://127.0.0.1:8000/api/product/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -66,7 +66,7 @@ export default class APIService {
     }
 
     static UserDetails(id) {
-        return fetch("http://127.0.0.1:8000/auth/user/${id}", {
+        return fetch(`http://127.0.0.1:8000/auth/user/${id}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
