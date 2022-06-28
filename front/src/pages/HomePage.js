@@ -11,9 +11,12 @@ export const HomePage = () => {
             setProducts(resp);
         })
     }, [])
+    function singleBtnClicked(e) {
+
+    }
     return (
         <div className="homepage">
-            <Search />
+            <Search singleBtnClicked = {singleBtnClicked}/>
             <div className="product-list">
                 {products.map((p) => (
                     <ListItem key={p.id} name={p.name} img={p.image} price={p.price}/>
