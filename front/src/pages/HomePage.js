@@ -14,7 +14,7 @@ export const HomePage = () => {
 
     function singleBtnClicked(searchInput, priceFilters, categoryFilters) {
         const types = new Map(Object.entries(categoryFilters));
-        const dict = {"lursman": "RS", "shurup": "RF"}
+        const dict = {"Common": "CM", "Finishing": "FS", "Box": "BX", "Roofing": "RF", "Masonry": "MS", "Double Headed": "DH", "Drywall": "DW", "Annual Ring Shank": "RS", "Carpet":"CP", "Staple":"ST"}
         let type = '';
         types.forEach((value, key) => {
             if (value === true) {
@@ -39,7 +39,7 @@ export const HomePage = () => {
 
     return (
         <div className="homepage">
-            <Search searchBtnClicked={singleBtnClicked} categories={["shurup", "lursman", "drel"]}/>
+            <Search searchBtnClicked={singleBtnClicked} categories={["Common", "Finishing", "Box", "Roofing", "Masonry", "Double Headed", "Drywal", "Annual Ring Shank", "Carpet", "Staple"]}/>
             <div className="product-list">
                 {products.map((p) => (
                     <ListItem key={p.id} name={p.name} img={p.image} price={p.price}/>
