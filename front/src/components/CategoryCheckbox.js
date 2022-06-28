@@ -5,7 +5,7 @@ export const CategoryCheckbox = ({ label, handleChange }) => {
   return (
     <>
         <label className="category-label">
-            <input className="filter-checkbox" type="checkbox" onChange={() => handleChange} />
+            <input className="filter-checkbox" type="checkbox" onChange={() => handleChange(label)} />
             {label}
         </label>
     </>
