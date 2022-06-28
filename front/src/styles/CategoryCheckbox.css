@@ -1,6 +1,11 @@
 .category-label {
     color: #ebebeb;
     margin: 0 8px;
+    font-size: 18px;
     font-family: inherit;
     font-weight: 500;
+}
+
+.filter-checkbox {
+    margin-right: 8px;
 }

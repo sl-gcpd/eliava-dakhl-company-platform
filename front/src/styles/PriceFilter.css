@@ -17,17 +17,23 @@
 }
 
 h3 {
+    display: inline-block;
     color: #ebebeb;
-    font-size: 14px;
-    margin: 20px 8px 4px;
+    font-size: 20px;
+    margin: 30px 8px 4px;
 }
 
 .price-box {
+    display: inline-block;
     flex: 50%;
 }
 
 @media screen and (max-width: 650px) {
     .price-box {
         flex: 100%;
+    }
+
+    h3 {
+        display: block;
     }
 }
