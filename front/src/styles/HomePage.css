@@ -5,31 +5,7 @@
     height: auto;
 }
 
-
-.search-button {
-    position: absolute;
-    right: 0;
-    font-family: inherit;
-    font-weight: 800;
-    color: #ebebeb;
-    flex: 30%;
-    max-width: 370px;
-    background: #3d587f;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 30px;
-    box-shadow: 4px 4px 7px rgba(0,0,0,.9);
-    transition:  background .4s, box-shadow .4s;
-}
-
-.search-button:hover {
-    background-color: #2e3440;
-    box-shadow: 8px -1px 7px rgba(0,0,0,.3);
-}
-
-.search-button:focus {
-    outline: none;
+.homepage {
+    width: 90%;
+    margin: 0 auto;
 }

@@ -18,16 +18,10 @@ export const Search = ({searchBtnClicked, categories}) => {
 
     return (
         <div className="search-box">
-            <SearchBar handleChange={setSearch}/>
+            <SearchBar handleChange={setSearch} onClick={() => searchBtnClicked(search, [from, to], categoryFilters)}/>
             <div className="filters">
                 <PriceFilter from={from} to={to} setFrom={setFrom} setTo={setTo}/>
                 <CategoryFilter categories={categories} handleChange={toggleCategory}/>
-                <button className="search-button"
-                        onClick={() => {
-                            searchBtnClicked(search, [from, to], categoryFilters)
-                        }
-                        }>Search
-                </button>
             </div>
 
         </div>

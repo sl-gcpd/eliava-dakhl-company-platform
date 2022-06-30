@@ -38,7 +38,8 @@ header {
     border-radius: 8px;
     padding: 12px;
     max-width: 80px;
-    margin: 8px 0 8px 12px;
+    min-width: 80px;
+    margin: 8px 12px;
     box-shadow: 7px 4px 12px rgba(0,0,0,.2);
     background: #2e3440;
     color: white;
@@ -49,6 +50,8 @@ header {
         flex-direction: row;
     }
     header {
+        margin: 8px auto;
         max-width: 100%;
+        min-width: 100%;
     }
 }
