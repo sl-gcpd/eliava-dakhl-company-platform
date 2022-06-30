@@ -1,0 +1,66 @@
+.account-box {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.account-top img {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+    border: 8px solid #e4e4e4;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 4px 8px 9px rgba(0, 0, 0, .4);
+    transition: .4s;
+}
+
+.account-top h1 {
+    font-size: 52px;
+    margin-left: 16px;
+}
+
+.account-top img:hover {
+    box-shadow: 8px 2px 9px rgba(0,0,0,.4);
+}
+
+
+.account-info {
+    border-radius: 8px;
+    width: 50%;
+    margin: 24px auto;
+    border: 2px solid #2e3440;
+}
+
+.account-info-item {
+    margin: 16px 12px;
+    font-size: 20px;
+}
+
+.account-info-item h2 {
+    color: #777;
+    font-size: 16px;
+    text-align: left;
+    margin-right: 12px;
+}
+
+.account-info-item p {
+    font-weight: bolder;
+    text-align: left;
+}
+
+@media screen and (max-width: 770px) {
+    .account-top {
+        margin: 0 auto;
+    }
+
+    .account-info {
+        margin: 24px auto;
+        width: 90%;
+    }
+
+    .account-info-item p {
+        font-size: 14px;
+    }
+}

@@ -1,5 +1,5 @@
 .authorize-box {
-    max-width: 70%;
+    width: 70%;
     margin: 80px auto;
     background-color: #2e3440;
     padding: 16px;
@@ -46,6 +46,12 @@
     text-decoration: underline;
     cursor: pointer;
     transition: color .4s;
+}
+
+@media screen and (max-width: 770px) {
+    .authorize-box {
+        width: 90%;
+    }
 }
 
 .register-hint a:hover {
