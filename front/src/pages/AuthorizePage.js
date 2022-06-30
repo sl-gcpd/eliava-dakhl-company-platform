@@ -53,7 +53,7 @@ const AuthorizePage = ({isSigningUp}) => {
 
                     <button className="authorize-button" onClick={(e) => {
                         e.preventDefault()
-                        isSignUp ? login() : login()
+                        isSignUp ? login() : register()
                     }
                     }>{isSignUp ? "sign up" : "sign in"}</button>
 

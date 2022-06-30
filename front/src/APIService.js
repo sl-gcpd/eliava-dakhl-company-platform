@@ -82,6 +82,7 @@ export default class APIService {
         formData.append("firstName", body.name)
         formData.append("password2", body.confirmPassword)
         formData.append("password", body.password)
+        formData.append("profilePicture", "")
 
         return axios({
             method: "post",
@@ -92,7 +93,7 @@ export default class APIService {
     }
 
     static Logout() {
-        return fetch("http://127.0.0.1:8000/auth/register", {
+        return fetch("http://127.0.0.1:8000/auth/logout", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
