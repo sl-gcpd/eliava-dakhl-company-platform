@@ -8,7 +8,7 @@ class Product(models.Model):
     inStock = models.IntegerField()
     minQuantity = models.IntegerField()
     description = models.TextField(null=True, blank=True)
-    image = models.ImageField(upload_to='images/', null = True)
+    image = models.ImageField(upload_to='images/',  default = "media/default-product.jpeg")
 
     COMMON = 'CM'
     FINISHING = 'FS'

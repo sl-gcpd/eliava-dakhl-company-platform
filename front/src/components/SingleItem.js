@@ -2,10 +2,11 @@ import React, {useEffect, useState} from "react";
 import "../styles/SingleItem.css";
 import APIService from "../APIService";
 import {useParams} from "react-router-dom";
+import {useCookies} from "react-cookie";
 
 export const SingleItem = () => {
     const params = useParams();
-    
+    const [cookie, setCookie, removeCookie] = useCookies(["user_id"])
     const [img, setImg] = useState("")
     const [name, setName] = useState("")
     const [price, setPrice] = useState(0)
@@ -34,12 +35,19 @@ export const SingleItem = () => {
                     </div>
                     <div className="single-buttons">
                         <button id="single-price">${price}</button>
-                        <button id="single-cart">Add to cart</button>
+                        <button id="single-cart" onClick={() => {
+                            APIService.AddCartItem({
+                                    "user_id": parseInt(cookie["user_id"]),
+                                    "product_id": parseInt(params.id),
+                                }
+                            ).then((resp) => console.log(resp))
+                        }}>Add to cart
+                        </button>
                     </div>
                 </div>
             </div>
             <ul>
-                        <li>{categories}</li>
+                <li>{categories}</li>
             </ul>
             <p className="single-description">{description}</p>
         </div>

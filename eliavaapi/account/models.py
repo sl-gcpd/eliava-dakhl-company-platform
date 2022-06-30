@@ -4,7 +4,7 @@ from django.contrib.auth.models import (
 )
 
 class CustomUserManager(BaseUserManager):
-    def create_user(self, email,firstName,lastName,profilePicture=None,password=None):
+    def create_user(self, email,firstName,profilePicture=None,password=None):
 
         if not email:
             raise ValueError('Users must have an email address')
@@ -12,7 +12,6 @@ class CustomUserManager(BaseUserManager):
         user = self.model(
             email=self.normalize_email(email),
             firstName=firstName,
-            lastName=lastName,
             profilePicture=profilePicture
         )
 
@@ -20,7 +19,7 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, firstName,lastName,password=None):
+    def create_superuser(self, email, firstName,password=None):
         """
         Creates and saves a superuser with the given email, date of
         birth and password.
@@ -29,7 +28,6 @@ class CustomUserManager(BaseUserManager):
             email,
             password=password,
             firstName=firstName,
-            lastName=lastName
         )
         user.is_admin = True
         user.save(using=self._db)
@@ -39,18 +37,16 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractBaseUser):
     email = models.EmailField(max_length=255,unique=True)
     firstName = models.CharField(max_length=255)
-    lastName = models.CharField(max_length=255)
     profilePicture = models.ImageField(upload_to='images/', null = True)
-    date_of_birth = models.DateField(null=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     objects = CustomUserManager()
 
     USERNAME_FIELD ='email'
-    REQUIRED_FIELDS = ['firstName','lastName']
+    REQUIRED_FIELDS = ['firstName']
 
     def __str__(self):
-        return self.firstName+self.lastName
+        return self.firstName
 
     def has_perm(self, perm, obj=None):
         return self.is_admin
