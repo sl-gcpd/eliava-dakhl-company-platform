@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from '../img/download.jpeg'
 import '../styles/MyAccountPage.css'
+import {BiUser} from "react-icons/bi";
 
 const MyAccountPage = () => {
     return (
         <div className="account-box">
+            <h1 className="page-icon"><BiUser /></h1>
             <div className="account-top">
                 <img alt="" src={Image}/>
                 <h1>Ramaz</h1>
