@@ -40,7 +40,7 @@ class CustomUser(AbstractBaseUser):
     email = models.EmailField(max_length=255,unique=True)
     firstName = models.CharField(max_length=255)
     lastName = models.CharField(max_length=255)
-    profilePicture = models.ImageField(upload_to='images/', null = True)
+    profilePicture = models.ImageField(upload_to='images/',  default = "media/default-profile.jpeg")
     date_of_birth = models.DateField(null=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
