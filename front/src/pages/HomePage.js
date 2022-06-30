@@ -15,7 +15,7 @@ export const HomePage = ({products, setProducts}) => {
         <div className="homepage">
             <div className="product-list">
                 {products.map((p) => (
-                    <ListItem key={p.id} name={p.name} img={p.image} price={p.price}/>
+                    <ListItem key={p.id} id = {p.id} name={p.name} img={p.image} price={p.price}/>
                 ))}
             </div>
         </div>

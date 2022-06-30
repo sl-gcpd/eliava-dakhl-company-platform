@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from "react";
 import "../styles/SingleItem.css";
 import APIService from "../APIService";
+import {useParams} from "react-router-dom";
 
-export const SingleItem = ({id}) => {
-
+export const SingleItem = () => {
+    const params = useParams();
+    
     const [img, setImg] = useState("")
     const [name, setName] = useState("")
     const [price, setPrice] = useState(0)
@@ -11,7 +13,7 @@ export const SingleItem = ({id}) => {
     const [description, setDescription] = useState("")
 
     useEffect(() => {
-        APIService.GetProduct(id).then(resp => {
+        APIService.GetProduct(params.id).then(resp => {
             setImg(resp.image)
             setName(resp.name)
             setPrice(resp.price)

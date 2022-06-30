@@ -6,10 +6,10 @@ const Header = () => {
         <header>
             <nav className="nav-collapse">
                 <ul>
-                    <li className="menu-item active"><a href="#"><BiHomeAlt/></a></li>
-                    <li className="menu-item active"><a href="#"><BiCartAlt/></a></li>
-                    <li className="menu-item active"><a href="#"><BiUser/></a></li>
-                    <li className="menu-item active"><a href="#"><BiLogInCircle/></a></li>
+                    <li className="menu-item active"><a href="/"><BiHomeAlt/></a></li>
+                    <li className="menu-item active"><a href="/cart"><BiCartAlt/></a></li>
+                    <li className="menu-item active"><a href="/profile"><BiUser/></a></li>
+                    <li className="menu-item active"><a href="/#"><BiLogInCircle/></a></li>
                 </ul>
             </nav>
         </header>

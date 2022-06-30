@@ -5,6 +5,11 @@ import Header from "./components/Header";
 import APIService from "./APIService";
 import {useEffect, useState} from "react";
 import {Search} from "./components/Search";
+import CartPage from "./pages/CartPage";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import AuthorizePage from "./pages/AuthorizePage";
+import MyAccountPage from "./pages/MyAccountPage";
+import {SingleItem} from "./components/SingleItem";
 
 const App = () => {
 
@@ -52,15 +57,24 @@ const App = () => {
     }
 
     return (
-        <div className="container">
-            <div className="menu-search">
-                <Header/>
-                <Search searchBtnClicked={singleBtnClicked}
-                        categories={["Common", "Finishing", "Box", "Roofing", "Masonry", "Double Headed", "Drywal", "Annual Ring Shank", "Carpet", "Staple"]}/>
+        <BrowserRouter>
+            <div className="container">
+                <div className="menu-search">
+                    <Header/>
+                    <Search searchBtnClicked={singleBtnClicked}
+                            categories={["Common", "Finishing", "Box", "Roofing", "Masonry", "Double Headed", "Drywal", "Annual Ring Shank", "Carpet", "Staple"]}/>
+                </div>
+                <Routes>
+                    <Route path="" element={<HomePage products={products} setProducts={setProducts}/>}/>
+                    <Route path="/cart" element={<CartPage products={products} setProducts={setProducts}/>}/>
+                    <Route path="/products/:id" element={<SingleItem/>}/>
+                    <Route path="/profile" element={<MyAccountPage/>}/>
+                    <Route path="/auth" element={<AuthorizePage/>}/>
+                </Routes>
+                <Footer/>
             </div>
-            <HomePage products={products} setProducts={setProducts}/>
-            <Footer/>
-        </div>
+        </BrowserRouter>
+
     );
 }
 
