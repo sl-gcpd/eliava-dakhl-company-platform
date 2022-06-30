@@ -6,20 +6,24 @@ import { useCookies } from "react-cookie";
 
 const MyAccountPage = () => {
     const [user, setUser] = useState("")
+    const [img, setImg] = useState("")
     const [cookie, setCookie, removeCookie] = useCookies(
-        ["user_id"]
+        ["user_id"],
+        ["access_token"]
     );
     useEffect(() => {
-        APIService.GetUser(cookie["user_id"]).then((resp) => {
+        APIService.GetUser(parseInt(cookie["user_id"]), cookie["access_token"]).then((resp) => {
             setUser(resp);
+            setImg(`http://127.0.0.1:8000${resp.profilePicture}`)
         })
     }, [])
+    console.log(img)
     return (
         <div className="account-box">
             <h1 className="page-icon"><BiUser /></h1>
             <div className="account-top">
-                <img alt="" src={user.image}/>
-                <h1>{user.name}</h1>
+                <img alt="" src={img}/>
+                <h1>{user.firstName}</h1>
             </div>
             <div className="account-info">
                 <div className="account-info-item">

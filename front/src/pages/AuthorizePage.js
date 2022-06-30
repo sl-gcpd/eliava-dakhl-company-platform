@@ -16,7 +16,8 @@ const AuthorizePage = ({isSigningUp}) => {
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [cookie, setCookie, removeCookie] = useCookies(
-        ["user_id"]
+        ["user_id"],
+        ["access_token"]
     );
 
     const login = async () => {
@@ -24,6 +25,7 @@ const AuthorizePage = ({isSigningUp}) => {
         console.log(resp)
         if (resp.status === 200) {
             setCookie("user_id", resp.data.user_id)
+            setCookie("access_token", resp.data.access)
         } else {
         }
     }
