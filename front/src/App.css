@@ -3,3 +3,15 @@
     min-height: 100vh;
     padding-bottom: 6rem;
 }
+
+.menu-search {
+    display: flex;
+    width: 90%;
+    margin: 8px auto 16px;
+}
+
+@media screen and (max-width: 770px) {
+    .menu-search {
+        flex-direction: column;
+    }
+}
