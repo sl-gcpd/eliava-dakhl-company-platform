@@ -37,6 +37,16 @@ export default class APIService {
         }).then((resp) => resp.json());
     }
 
+    static AddCartItem(body) {
+        return fetch("http://127.0.0.1:8000/cart/add", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+        }).then((resp) => resp.json());
+    }
+
     static GetUser(id, token) {
         console.log(token)
         return fetch(`http://127.0.0.1:8000/auth/user/${id}`, {
