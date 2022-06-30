@@ -4,7 +4,6 @@ import '../styles/PriceFilter.css'
 export const PriceFilter = ({from, to, setFrom, setTo}) => {
     return (
         <div className="price-box">
-            <h3>filter price</h3>
             <input className="price-filter" placeholder="From" value={from}
                    type="number"
                    onChange={(e) => setFrom(e.target.value)}/>
