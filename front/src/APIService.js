@@ -28,12 +28,26 @@ export default class APIService {
         }).then((resp) => resp.json());
     }
 
-    static GetUser(id) {
-        return fetch(`http://127.0.0.1:8000/auth/user/${id}`, {
+    static GetCartItemss(id) {
+        return fetch(`http://127.0.0.1:8000/cart/items?${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
             },
+        }).then((resp) => resp.json());
+    }
+
+    static GetUser(id, token) {
+        console.log(token)
+        return fetch(`http://127.0.0.1:8000/auth/user/${id}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            },
+            auth: {
+                "Token": token
+            }
         }).then((resp) => resp.json());
     }
 
