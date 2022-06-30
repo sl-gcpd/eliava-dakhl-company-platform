@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/ListItem.css";
 
+import {BiCartAlt} from "react-icons/bi";
+
 export const ListItem = ({name, img, price}) => {
     return (
         <div className="list-item-box">
@@ -10,7 +12,7 @@ export const ListItem = ({name, img, price}) => {
             <div className="list-item-btn-box">
                 <button className="list-item-read-more">Read more</button>
                 <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
-                <button className="list-item-add-to-cart">Add to cart</button>
+                <button className="list-item-add-to-cart"><BiCartAlt /></button>
             </div>
         </div>
     );

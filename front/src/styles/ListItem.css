@@ -1,8 +1,7 @@
 
 .list-item-box {
   margin: 30px auto;
-  min-width: 320px;
-  max-width: 400px;
+  width: 320px;
   display: flex;
   flex-flow: column;
   position: relative;
@@ -15,7 +14,7 @@
 
 
 .list-item-box:hover {
-  box-shadow: 2px 0 8px rgba(0,0,0,.4);
+  box-shadow: 2px -2px 8px rgba(0,0,0,.4);
 }
 
 
@@ -33,8 +32,8 @@
 }
 
 .list-item-box img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   margin: 10px auto;
   border: 8px solid #ebebeb;
   cursor: pointer;
@@ -85,23 +84,21 @@
 }
 
 .list-item-btn-box {
-  padding: 2px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .list-item-btn-box button {
   cursor: pointer;
-  margin: 5px 10px;
-  padding: 6px;
+  margin: 4px;
+  padding: 8px 16px;
   border: none;
   box-shadow: 4px 0 5px rgba(0,0,0,.4);
   border-radius: 8px;
   transition: .4s;
   color: #ebebeb;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 18px;
-  flex: 50%;
 }
 
 .list-item-btn-box button:focus {
@@ -113,10 +110,11 @@
 }
 
 .list-item-read-more {
+  flex: 70%;
   background-color: #3d587f;
 }
 
 .list-item-add-to-cart {
-  flex: 50%;
+  flex: 10%;
   background-color: #319a3c;
 }
