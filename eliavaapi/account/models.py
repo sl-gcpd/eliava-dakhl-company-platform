@@ -1,14 +1,7 @@
 from django.db import models
-
-# Create your models here.
-import datetime
-
-from django.contrib.auth.base_user import AbstractBaseUser
-from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
-from django.utils import timezone
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, email,firstName,lastName,profilePicture=None,password=None):
