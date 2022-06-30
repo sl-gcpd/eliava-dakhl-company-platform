@@ -1,31 +1,41 @@
-import React from 'react'
-import Image from '../img/download.jpeg'
+import React, {useEffect, useState} from 'react'
 import '../styles/MyAccountPage.css'
 import {BiUser} from "react-icons/bi";
+import APIService from "../APIService";
+import { useCookies } from "react-cookie";
 
 const MyAccountPage = () => {
+    const [user, setUser] = useState("")
+    const [cookie, setCookie, removeCookie] = useCookies(
+        ["user_id"]
+    );
+    useEffect(() => {
+        APIService.GetUser(cookie["user_id"]).then((resp) => {
+            setUser(resp);
+        })
+    }, [])
     return (
         <div className="account-box">
             <h1 className="page-icon"><BiUser /></h1>
             <div className="account-top">
-                <img alt="" src={Image}/>
-                <h1>Ramaz</h1>
+                <img alt="" src={user.image}/>
+                <h1>{user.name}</h1>
             </div>
             <div className="account-info">
                 <div className="account-info-item">
                     <h2>Email</h2>
-                    <p>numerical.prostitute@kiu.edu.ge</p>
+                    <p>{user.email}</p>
                 </div>
 
                 <div className="account-info-item">
                     <h2>Date of Birth</h2>
-                    <p>32 February, 1666</p>
+                    <p>{user.date_of_birth}</p>
                 </div>
 
-                <div className="account-info-item">
-                    <h2>Account Type</h2>
-                    <p>Dekan</p>
-                </div>
+                {/*<div className="account-info-item">*/}
+                {/*    <h2>Account Type</h2>*/}
+                {/*    <p>{user.}</p>*/}
+                {/*</div>*/}
 
 
             </div>

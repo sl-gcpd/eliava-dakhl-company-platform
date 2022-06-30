@@ -26,6 +26,15 @@ export default class APIService {
         }).then((resp) => resp.json());
     }
 
+    static GetUser(id) {
+        return fetch(`http://127.0.0.1:8000/auth/user/${id}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then((resp) => resp.json());
+    }
+
     static Login(body) {
         return fetch("http://127.0.0.1:8000/auth/login", {
             method: "POST",
