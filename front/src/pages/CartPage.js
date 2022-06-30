@@ -1,6 +1,10 @@
-const CartPage = () => {
+import { BiCartAlt } from "react-icons/bi";
+
+const CartPage = ({id}) => {
     return(
-        <div></div>
+        <div>
+            <h1 className="page-icon"><BiCartAlt /></h1>
+        </div>
     );
 }
 

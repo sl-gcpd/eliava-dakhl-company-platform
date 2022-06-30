@@ -9,7 +9,7 @@ const Header = () => {
                     <li className="menu-item active"><a href="/"><BiHomeAlt/></a></li>
                     <li className="menu-item active"><a href="/cart"><BiCartAlt/></a></li>
                     <li className="menu-item active"><a href="/profile"><BiUser/></a></li>
-                    <li className="menu-item active"><a href="/#"><BiLogInCircle/></a></li>
+                    <li className="menu-item active"><a href="/auth"><BiLogInCircle/></a></li>
                 </ul>
             </nav>
         </header>
