@@ -1,17 +1,44 @@
 .authorize-box {
-    max-width: 520px;
-    min-width: 260px;
+    max-width: 70%;
     margin: 80px auto;
     background-color: #2e3440;
-    padding: 12px;
+    padding: 16px;
     border-radius: 8px;
     box-shadow: 8px 5px 9px rgba(0,0,0,.5);
 }
 
 .register-hint {
     text-align: center;
+    margin-top: 8px;
     color: #bbb;
     font-weight: 700;
+}
+
+.authorize-button {
+    font-family: inherit;
+    font-weight: 800;
+    color: #ebebeb;
+    width: 100%;
+    display: block;
+    max-width: 370px;
+    background: #3d587f;
+    padding: 12px;
+    margin: 24px auto 0;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 4px 4px 7px rgba(0,0,0,.9);
+    transition:  background .4s, box-shadow .4s;
+}
+
+.authorize-button:hover {
+    background-color: #2e3440;
+    box-shadow: 8px -1px 7px rgba(0,0,0,.3);
+}
+
+.authorize-button:focus {
+    outline: none;
 }
 
 .register-hint a {
