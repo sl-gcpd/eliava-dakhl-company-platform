@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export default class APIService {
     static GetAllProducts() {
         return fetch("http://127.0.0.1:8000/api/product", {
@@ -35,24 +37,33 @@ export default class APIService {
         }).then((resp) => resp.json());
     }
 
-    static Login(body) {
-        return fetch("http://127.0.0.1:8000/auth/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(body),
-        }).then((resp) => resp.json());
+    static LoginUser = async (body) => {
+        console.log(body)
+        const formData = new FormData()
+        formData.append("email", body.email)
+        formData.append("password", body.password)
+
+        return axios({
+            method: "post",
+            url: "http://127.0.0.1:8000/auth/login",
+            data: formData,
+            headers: {"Content-Type": "multipart/form-data"},
+        });
     }
 
-    static Register(body) {
-        return fetch("http://127.0.0.1:8000/auth/register", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(body),
-        }).then((resp) => resp.json());
+    static RegisterUser(body) {
+        const formData = new FormData()
+        formData.append("email", body.email)
+        formData.append("firstName", body.name)
+        formData.append("password2", body.confirmPassword)
+        formData.append("password", body.password)
+
+        return axios({
+            method: "post",
+            url: "http://127.0.0.1:8000/auth/register",
+            data: formData,
+            headers: {"Content-Type": "multipart/form-data"},
+        })
     }
 
     static Logout() {
@@ -61,16 +72,6 @@ export default class APIService {
             headers: {
                 "Content-Type": "application/json",
             },
-        }).then((resp) => resp.json());
-    }
-
-    static ChangePassword(body) {
-        return fetch("http://127.0.0.1:8000/auth/change-password", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(body),
         }).then((resp) => resp.json());
     }
 

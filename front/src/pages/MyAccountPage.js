@@ -26,18 +26,6 @@ const MyAccountPage = () => {
                     <h2>Email</h2>
                     <p>{user.email}</p>
                 </div>
-
-                <div className="account-info-item">
-                    <h2>Date of Birth</h2>
-                    <p>{user.date_of_birth}</p>
-                </div>
-
-                {/*<div className="account-info-item">*/}
-                {/*    <h2>Account Type</h2>*/}
-                {/*    <p>{user.}</p>*/}
-                {/*</div>*/}
-
-
             </div>
         </div>
     )
