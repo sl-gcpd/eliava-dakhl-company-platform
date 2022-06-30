@@ -24,7 +24,8 @@ from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('product.urls')),
-    path('auth/',include('account.urls'))
+    path('auth/',include('account.urls')),
+    path('cart/',include('cart.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
