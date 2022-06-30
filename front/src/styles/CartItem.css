@@ -1,3 +1,38 @@
 .cart-item {
+    display: flex;
+    border-radius: 8px;
+    border: 2px solid #2e3440;
+    padding: 8px;
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
 
+.cart-image {
+    display: inline;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.cart-name {
+    font-size: 32px;
+    margin-left: 12px;
+}
+
+.cart-item p {
+    border-radius: 30px;
+    background: #2e3440;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    transition: .4s;
+}
+
+.cart-item p:hover {
+    background: #319a3c;
 }

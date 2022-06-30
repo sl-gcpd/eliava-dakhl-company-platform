@@ -38,6 +38,7 @@ export default class APIService {
     }
 
     static AddCartItem(body) {
+        console.log(JSON.stringify(body))
         return fetch("http://127.0.0.1:8000/cart/add", {
             method: "POST",
             headers: {

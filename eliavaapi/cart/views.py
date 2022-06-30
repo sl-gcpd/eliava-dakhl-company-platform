@@ -1,5 +1,5 @@
 from django_rest.http import status
-from rest_framework import generics
+from rest_framework import generics, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Cart
@@ -29,6 +29,7 @@ class CartView(generics.ListAPIView):
 class AddCartView(APIView):
     def post(self, request):
         serializer = serializers.CartSerializer(data=request.data)
+        permission_classes = [permissions.IsAuthenticated]
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
