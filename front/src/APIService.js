@@ -80,8 +80,8 @@ export default class APIService {
         const formData = new FormData()
         formData.append("email", body.email)
         formData.append("firstName", body.name)
-        formData.append("password2", body.confirmPassword)
         formData.append("password", body.password)
+        formData.append("password2", body.confirmPassword)
         formData.append("profilePicture", "")
 
         return axios({

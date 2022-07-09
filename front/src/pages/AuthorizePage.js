@@ -32,8 +32,10 @@ const AuthorizePage = ({isSigningUp}) => {
 
     const register = async () => {
         const resp = await APIService.RegisterUser({name, email, password, confirmPassword})
+        console.log(resp)
         if (resp.status === 200) {
-            setCookie("user_id", resp.user_id)
+            setCookie("user_id", resp.data.user_id)
+            setCookie("access_token", resp.data.access)
             navigate("/")
         } else {
         }
@@ -42,6 +44,13 @@ const AuthorizePage = ({isSigningUp}) => {
     return (
         <>
             <h1 className="page-icon"><BiLogInCircle/></h1>
+            {cookie["user_id"] ?
+                <button className="authorize-button" onClick={() => {
+                    removeCookie("user_id")
+                }
+                }>sign out</button>
+                : <></>
+            }
             <div className="authorize-box">
                 <form>
 
@@ -53,7 +62,8 @@ const AuthorizePage = ({isSigningUp}) => {
 
                     <button className="authorize-button" onClick={(e) => {
                         e.preventDefault()
-                        isSignUp ? login() : register()
+                        isSignUp ? register() : login()
+
                     }
                     }>{isSignUp ? "sign up" : "sign in"}</button>
 

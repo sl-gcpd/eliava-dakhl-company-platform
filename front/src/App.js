@@ -69,7 +69,7 @@ const App = () => {
                     <Route path="/cart" element={<CartPage products={products} setProducts={setProducts}/>}/>
                     <Route path="/products/:id" element={<SingleItem/>}/>
                     <Route path="/profile" element={<MyAccountPage/>}/>
-                    <Route path="/auth" element={<AuthorizePage/>}/>
+                    <Route path="/auth" element={<AuthorizePage isSigningUp={false}/>}/>
                 </Routes>
                 <Footer/>
             </div>
