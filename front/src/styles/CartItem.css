@@ -3,10 +3,12 @@
     border-radius: 8px;
     border: 2px solid #2e3440;
     padding: 8px;
-    width: 350px;
+    max-width: 350px;
+    flex: 30%;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    margin: 12px auto;
+    position: relative;
+    justify-content: left;
 }
 
 .cart-image {
