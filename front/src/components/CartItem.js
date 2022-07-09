@@ -1,4 +1,3 @@
-import Image from '../img/download.jpeg'
 import '../styles/CartItem.css'
 import {useEffect, useState} from "react";
 import APIService from "../APIService";
